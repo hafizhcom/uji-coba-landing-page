@@ -1,0 +1,1312 @@
+body {
+  background-color: #f0f2f5; /*#f0f2f5;*/
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  /*background-color: #F8F9FA;*/
+  background-color: #001f3f;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 999;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  padding: 15px;
+  /* color: #007BFF;*/
+  color: #add8e6;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00bfff;
+  bottom: -5px;
+  transition: width 0.3s ease;
+  left: 0;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover,
+.footer-item a:hover {
+  color: #00bfff;
+}
+
+#hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("bg-4.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 95vh;
+}
+
+#hero h1 {
+  font-family: sans-serif;
+  font-size: 3rem;
+  text-shadow: 4px 4px 4px blue;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  margin-top: 190px;
+  margin-left: 35px;
+  line-height: 1.3;
+}
+
+#hero h1 b {
+  color: #00bfff;
+  text-shadow: none;
+}
+
+#hero p {
+  margin-left: 35px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: white;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+#hero a.button {
+  padding: 16px 30px;
+  background-color: blue;
+  border-radius: 50px;
+  gap: 0;
+  margin-left: 35px;
+  transition: all 0.35s ease;
+}
+
+#hero a.button:hover,
+.btn-wa:hover,
+.buy-btn:hover {
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  color: #ffffff;
+  box-shadow: 0 15px 30px rgba(41, 128, 185, 0.35);
+  transform: translateY(-6px) scale(1.04);
+}
+
+#hero a {
+  color: white;
+  text-decoration: none;
+  font-family: arial;
+}
+
+.box {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 30px;
+}
+
+.box h1 {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.box-list {
+  gap: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-item {
+  margin-top: 15px;
+  padding: 15px 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 18px lightgrey;
+  transition: transform 0.3s ease-in !important;
+}
+
+.box-item h2 {
+  font-size: 1.6rem;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.box-item:hover,
+.medsos-item:hover {
+  background-color: whitesmoke;
+  transform: translateY(-7px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas saat naik */
+  cursor: pointer; /* Menunjukkan bahwa ini bisa di-klik */
+}
+
+.image img {
+  width: 38vh;
+  height: 38vh;
+  margin-left: 100px;
+}
+
+.teks p {
+  margin-left: 32px;
+  margin-right: 200px;
+  font-size: 1.8rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  color: #666666;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+.promosi {
+  margin-top: 30px;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  /*box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);*/
+  margin-right: 150px;
+  border-radius: 8px;
+  margin-left: 150px;
+}
+
+.about {
+  margin-top: 90px;
+  padding: 9rem 0;
+  text-align: center;
+  background-color: white;
+  height: 96vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.about::after {
+  content: "🚀";
+  position: absolute;
+  font-size: 50px;
+  right: 80%;
+  top: -30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.about h1 {
+  font-family: sans-serif;
+  color: navy;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: black;
+}
+
+/* Container utama agar teks berada di tengah tapi list tetap rapi di dalam */
+.tentang-container {
+  text-align: center; /* Mengetengahkan judul dan deskripsi */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Mengatur list agar rapat ke kiri di dalam container yang rata tengah */
+.fyzz-list {
+  list-style: none;
+  padding: 0;
+  display: inline-block; /* Agar list tetap di tengah tapi poin-poinnya rata kiri */
+  text-align: left;
+  margin-top: 20px;
+}
+
+.fyzz-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Membuat ikon ceklis biru */
+.fyzz-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #007bff; /* Warna biru profesional */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fyzz-list li strong {
+  color: #333;
+}
+
+.medsos-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.medsos {
+  margin-top: 180px;
+}
+
+.medsos-item {
+  background-color: aliceblue;
+  padding: 5px;
+  box-shadow: 0 0 7px gray;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in !important;
+}
+
+.medsos p {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+#produk {
+  margin-top: 90px;
+  padding: 6rem 0;
+  height: 90vh;
+  text-align: center;
+}
+
+#produk h1 {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  color: navy;
+  font-weight: bold;
+}
+
+.produk-list {
+  gap: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 3;
+  flex-wrap: wrap;
+}
+
+.produk-item {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px lightgrey;
+  border-radius: 8px;
+  padding: 20px 40px;
+  border-left: 5px solid black;
+}
+
+/* Tambahkan ini di toko.css kamu */
+.bi-eye {
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    color 0.2s;
+  font-size: 1.5rem; /* Ukuran icon */
+  color: #007bff; /* Warna biru */
+}
+
+.bi-eye:hover {
+  transform: scale(1.2); /* Icon membesar sedikit saat disentuh kursor */
+  color: #666666; /* Warna berubah jadi biru tua */
+}
+
+.produk-item h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 600;
+  display: flex;
+  color: navy;
+  font-family: sans-serif;
+}
+
+.produk-item p {
+  display: flex;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.harga {
+  display: flex; /* ⬅ bikin lebar mengikuti isi */
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Contoh jika bintang menggunakan tag <i> */
+i {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #666666;
+}
+
+.produk-item img {
+  object-fit: cover;
+  width: 340px;
+  height: 400px;
+  transition: 0.3s ease-in;
+}
+
+.produk-item img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
+/*TESTIMONI*/
+
+.testimoni {
+  padding: 60px 20px;
+  text-align: center;
+  height: 90vh;
+  margin-top: 890px;
+}
+
+.testimoni h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: navy;
+}
+
+/* ===== LIST ===== */
+.testimoni-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== CARD ===== */
+.testimoni-item {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  border-left: 5px solid black;
+}
+
+/* Hover effect */
+.testimoni-item:hover,
+.contact-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.06);
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+/* ===== TEXT ===== */
+.testimoni-item .komen {
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* ===== USER ===== */
+.testimoni-item h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #001f3f;
+}
+
+.testimoni-item span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== DECORATION ===== */
+.testimoni-item::before,
+.contact-item::before {
+  content: " ❝ ";
+  font-size: 60px;
+  color: #001f3f;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.contact {
+  margin-top: 30px;
+  padding: 6rem 0;
+  height: 98vh;
+  text-align: center;
+}
+
+#contactForm {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 35px 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: 0.3s ease;
+}
+
+#contactForm p {
+  color: #666666;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+/* Hover efek card */
+#contactForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Input & textarea */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  font-family: inherit;
+}
+
+/* Fokus efek */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15);
+}
+
+/* Textarea resize */
+#contactForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Tombol WhatsApp */
+#contactForm button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #25d366;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover tombol */
+#contactForm button:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+#faq h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+#faq {
+  height: 70vh;
+  padding: 3rem 0;
+  text-align: center;
+  gap: 30px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 95px;
+}
+
+#faq button {
+  border-radius: 8px;
+  border: 2px solid blue;
+  gap: 50px;
+  padding: 10px 80px;
+}
+
+/* animasi section */
+
+#faq::after {
+  content: "🚀";
+  position: absolute;
+  font-size: 50px;
+  right: 80%;
+  top: -30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.faq-list {
+  margin-left: 50px;
+  margin-right: 50px;
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact h1 {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: navy;
+  font-weight: bold;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-item {
+  max-width: 500px; /* Batasi lebar maksimal agar tidak terlalu lebar di layar PC */
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 10px lightgrey;
+  border-radius: 8px;
+  padding: 18px 25px;
+  flex: 1 1 100%; /*supaya ukuran box nya sama semua */
+  height: 24vh;
+  border-left: 5px solid black;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+}
+
+.contact-item ul {
+  text-align: justify;
+  margin-left: 96px;
+}
+
+.contact-item li {
+  margin-top: 15px;
+  font-size: 15px;
+  list-style: none;
+  font-family: sans-serif;
+  color: #666666;
+}
+
+.contact-item .btn-wa {
+  padding: 12px 0;
+  width: 180px; /* WAJIB biar sama */
+  border-radius: 8px;
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+
+.contact-item .buy-btn {
+  padding: 12px 0;
+  width: 180px; /* WAJIB biar sama */
+  border-radius: 8px;
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-item p {
+  margin-top: 25px;
+  margin-bottom: 21px;
+  font-size: 15px;
+  color: #666666;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.contact-item h3 {
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+footer {
+  padding: 6rem 0;
+  background-color: #0a192f;
+  height: 75vh;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 30%;
+}
+
+.footer-item h3 {
+  font-size: 25px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.footer-item .judul-utama {
+  color: #add8e6;
+}
+
+.footer-item p {
+  color: #cccccc;
+  font-size: 17px;
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+.footer-item li {
+  list-style: none;
+  line-height: 1.6;
+}
+
+.footer-item a {
+  text-decoration: none;
+  color: orange;
+}
+
+.text-foot {
+  margin-top: 400px;
+  padding: 8px;
+  background-color: #0f233f;
+}
+
+.text-foot p {
+  text-align: center;
+  color: #aca8a8;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4a90e2, #1e3a8a);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a8a;
+}
+
+@media (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  #faq h1 {
+    font-size: 18px;
+  }
+
+  #faq {
+    height: auto;
+  }
+
+  .about::after,
+  #faq::after {
+    font-size: 40px;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #faq button {
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  body {
+    padding-top: 60px;
+    height: auto;
+    width: auto;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .navbar ul {
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  #hero {
+    height: 90vh;
+    width: auto;
+    padding: 0 17px;
+  }
+
+  #hero a.button {
+    border-radius: 50px;
+    padding: 13px 13px;
+    margin-left: 25px;
+  }
+
+  #hero h1 {
+    font-size: 1.7rem;
+    margin-bottom: 17px;
+  }
+
+  #hero p {
+    font-size: 13px;
+    margin-right: 17px;
+    text-align: justify;
+  }
+
+  .promosi {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-left: 6px solid black;
+  }
+
+  .image img {
+    display: block; /* Pastikan display block agar margin auto bekerja */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .teks p {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .box-list {
+    flex-wrap: wrap;
+  }
+
+  .box-item {
+    padding: 8px 15px;
+  }
+
+  .box-item h2 {
+    font-size: 20px;
+  }
+
+  .box h1 {
+    font-size: 24px;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .about h1 {
+    font-size: 24px;
+  }
+
+  .about p {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .fyzz-list {
+    margin-top: 48px;
+  }
+
+  .fyzz-list li {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+  }
+
+  .fyzz-list li strong {
+    font-size: 14px;
+  }
+
+  .produk-list {
+    flex-direction: column;
+  }
+
+  .produk {
+    height: auto;
+  }
+
+  .produk-item {
+    border-top: 6px solid black;
+    border-left: none;
+    margin-left: 15px;
+    width: auto;
+    margin-right: 15px;
+    padding: 15px;
+  }
+
+  .produk-item p {
+    font-size: 12px;
+  }
+
+  .produk-item h2 {
+    font-size: 19px;
+  }
+
+  /* Testimoni */
+  .testimoni {
+    overflow-x: hidden;
+    height: auto;
+    padding: 40px 16px;
+    margin-top: 330vh;
+    clear: both;
+    height: auto;
+  }
+
+  /* LIST jadi horizontal scroll */
+  .testimoni-list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0 20px;
+    max-width: 100%;
+  }
+
+  /* Hilangkan scrollbar */
+  .testimoni-list::-webkit-scrollbar {
+    display: none;
+  }
+  .testimoni-list {
+    scrollbar-width: none;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    overflow: hidden;
+  }
+
+  /* Card swipe */
+  .testimoni-item {
+    min-width: 80vw; /* menggunakan unit vw untuk ukuran kartu */
+    max-width: 80vw;
+    flex-shrink: 1; /* mengatur flex-shrink dengan tepat */
+    scroll-snap-align: center; /* mengatur scroll-snap-align dengan tepat */
+    padding: 16px 14px;
+  }
+
+  .testimoni-wrapper {
+    display: flex;
+    gap: 16px;
+    width: max-content; /* SANGAT PENTING: Supaya lebar mengikuti jumlah kartu */
+    animation: jalanTerus 8s linear infinite; /* Gunakan durasi lebih lama, 3s terlalu cepat */
+  }
+
+  @keyframes jalanTerus {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .testimoni-list:hover .testimoni-wrapper {
+    animation-play-state: paused;
+  }
+
+  .testimoni h1,
+  .contact h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .testimoni-item .komen {
+    font-size: 14px;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .contact {
+    height: auto;
+  }
+
+  .contact-item {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .contact-item h3 {
+    font-size: 18px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .contact-item ul {
+    margin-left: 10px;
+  }
+
+  .contact-item li {
+    font-size: 13px;
+  }
+
+  .contact-item .btn-wa,
+  .contact-item .buy-btn {
+    padding: 11px 10px;
+  }
+
+  footer {
+    padding: 3rem 1.5rem; /* Padding lebih kecil & rapat ke samping */
+    height: auto; /* Sangat penting: agar tinggi menyesuaikan konten */
+  }
+
+  .footer-list {
+    flex-direction: column; /* Berjejer ke bawah */
+    gap: 1rem; /* Jarak antar item lebih masuk akal */
+    align-items: center; /* Pusatkan konten */
+  }
+
+  .footer-item {
+    width: 100%; /* Mengambil lebar penuh */
+  }
+
+  .footer-item h3 {
+    font-size: 20px; /* Sedikit lebih kecil agar proporsional */
+    margin-bottom: 1rem;
+    margin-top: 30px;
+  }
+
+  .footer-item p {
+    font-size: 12px; /* Ukuran font yang pas untuk HP */
+    line-height: 1.5;
+  }
+
+  .footer-item ul {
+    padding: 0; /* Menghilangkan padding default ul */
+  }
+
+  .footer-item li {
+    font-size: 13px;
+  }
+
+  .text-foot {
+    margin-top: 80px;
+    text-align: center;
+    background-color: #0a192f;
+    font-size: 12px;
+  }
+
+  #contactForm {
+    max-width: 100%;
+    margin: 30px 15px;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    padding: 13px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  #contactForm textarea {
+    min-height: 90px;
+  }
+
+  #contactForm button {
+    padding: 13px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 932px) {
+  body * {
+    display: none;
+  }
+
+  body::before {
+    content: "Silakan gunakan mode potret 📱";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #hero {
+    height: 85vh;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+    margin-top: 150px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  /* PROMOSI */
+  .promosi {
+    margin-left: 80px;
+    margin-right: 80px;
+    height: auto;
+    padding: 3rem;
+  }
+
+  .image img {
+    width: 300px;
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .teks p {
+    margin: 0 40px;
+    font-size: 1.3rem;
+  }
+
+  /* ABOUT */
+  .about {
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  .about,
+  #faq {
+    position: relative;
+  }
+
+  /* PRODUK */
+  #produk {
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  .produk-item img {
+    width: 280px;
+    height: 350px;
+  }
+
+  /* TESTIMONI */
+  .testimoni {
+    height: auto;
+    margin-top: 120px; /* hapus 890px */
+  }
+
+  /* CONTACT */
+  .contact {
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  .contact-item {
+    height: auto;
+  }
+
+  .contact-item ul {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  footer {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .footer-list {
+    gap: 120px;
+  }
+
+  .text-foot {
+    margin-top: 60px;
+  }
+
+  .about::after,
+  #faq::after {
+    content: "🚀";
+    position: absolute;
+    font-size: 50px;
+    right: 80%;
+    top: -30px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #contactForm {
+    max-width: 600px;
+    margin: 70px auto;
+    padding: 45px 40px;
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    padding: 16px 18px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+
+  #contactForm textarea {
+    min-height: 120px;
+  }
+
+  #contactForm button {
+    padding: 16px;
+    font-size: 17px;
+    border-radius: 14px;
+  }
+
+  #contactForm:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+}
